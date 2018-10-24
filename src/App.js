@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Tabs from './components/Tabs';
+import DropdownMenu from './components/DropdownMenu';
 
 import './App.css';
 
@@ -11,17 +12,17 @@ class App extends Component {
                 <h1>Tabs Demo</h1>
 
                 <Tabs>
-                    <div label="Gator">
-                        See ya later, <em>Alligator</em>!
+                    <div label="Single-Select">
+                        <DropdownMenu />
                     </div>
 
-                    <div label="Croc">
+                    <div label="Multi-Select">
                         After 'while, <em>Crocodile</em>!
                     </div>
 
-                    <div label="Sarcosuchus">
+                    {/* <div label="Sarcosuchus">
                         Nothing to see here, this tab is <em>extinct</em>!
-                    </div>
+                    </div> */}
                 </Tabs>
             </div>
         );
