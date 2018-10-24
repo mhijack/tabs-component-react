@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Tab from './Tab';
 
 class Tabs extends Component {
+    static propTypes = {
+        children: PropTypes.instanceOf(Array).isRequired
+    };
+
     state = {
         activeTab: null
     };
@@ -15,7 +20,7 @@ class Tabs extends Component {
     *   @params: String tab, represents label of the tab
     */
     onClickTabItem = tab => {
-        console.log("set state")
+        console.log('set state');
         this.setState({ activeTab: tab });
     };
 

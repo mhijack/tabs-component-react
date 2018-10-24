@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
-import { CombineLatestSubscriber } from 'rxjs/internal/observable/combineLatest';
+import PropTypes from 'prop-types';
 
 class Tab extends Component {
+    static propTypes = {
+        activeTab: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        onClick: PropTypes.func.isRequired
+    };
+
     handleClick = e => {
         const { label, onClick, activeTab } = this.props;
 
